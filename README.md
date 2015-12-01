@@ -20,7 +20,7 @@ CLI tool for starting Kittik presentations
 Install it via npm:
 
 ```shell
-npm -g install kittik-cli
+npm install -g kittik-cli
 ```
 
 Start your presentation:
