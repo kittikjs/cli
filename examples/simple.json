@@ -1,0 +1,27 @@
+{
+  "slides": [
+    [
+      {
+        "name": "Text",
+        "options": {
+          "text": "Hello there"
+        }
+      }
+    ],
+    [
+      {
+        "name": "Text",
+        "options": {
+          "text": "How are you doing today?"
+        }
+      },
+      {
+        "name": "Text",
+        "options": {
+          "text": "Did you know that you can show presentation in terminal?",
+          "y": 12
+        }
+      }
+    ]
+  ]
+}

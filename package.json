@@ -13,7 +13,7 @@
     "url": "https://github.com/kittikjs/cli.git"
   },
   "bin": {
-    "kittik": "./bin/kittik"
+    "kittik": "./bin/kittik.js"
   },
   "scripts": {
     "coveralls": "cat ./coverage/lcov.info | coveralls",
