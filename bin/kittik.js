@@ -1,10 +1,10 @@
 #!/usr/bin/env node
+"use strict";
 
-import commander from 'commander';
-import pkg from '../package.json';
+const commander = require('commander');
+const pkg = require('../package.json');
 
 commander
   .version(pkg.version)
-  .command('start [file]', 'Start presentation')
-  .command('list', 'List of all installed shapes, themes, animations, etc...')
+  .command('start [file]', 'Start a presentation')
   .parse(process.argv);
