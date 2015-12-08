@@ -16,11 +16,9 @@
     "kittik": "./bin/kittik"
   },
   "scripts": {
-    "compile": "babel src --out-dir bin",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "prepublish": "npm run compile",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "test": "babel-node ./node_modules/.bin/isparta cover _mocha"
+    "test": "istanbul cover _mocha"
   },
   "dependencies": {
     "commander": "2.9.0",
@@ -30,10 +28,10 @@
     "chai": "3.4.1",
     "coveralls": "2.11.4",
     "cz-conventional-changelog": "1.1.4",
-    "isparta": "4.0.0",
+    "istanbul": "0.4.1",
     "mocha": "2.3.4",
-    "sinon": "1.17.2",
-    "semantic-release": "4.3.5"
+    "semantic-release": "4.3.5",
+    "sinon": "1.17.2"
   },
   "config": {
     "commitizen": {
