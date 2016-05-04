@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "commander": "2.9.0",
-    "kittik": "1.0.1"
+    "kittik": "2.0.0"
   },
   "devDependencies": {
     "chai": "3.5.0",
