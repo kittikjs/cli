@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "commander": "2.9.0",
-    "kittik": "2.0.0",
+    "kittik": "2.1.0",
     "yamljs": "0.2.7"
   },
   "devDependencies": {
