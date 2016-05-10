@@ -5,7 +5,7 @@ shapes:
       text: "Hello, Kittik"
       x: "center"
       y: "middle"
-      font: "Ghost"
+      font: "Star Wars"
 
 animations:
   - name: "Print"
@@ -15,6 +15,17 @@ animations:
 
 slides:
   - shapes:
+      - name: "Edit"
+        type: "FigText"
+        options:
+          text: "Edit your YML file"
+          x: "center"
+          y: "middle"
     animations:
+      - name: "Slide Out"
+        type: "Slide"
+        options:
+          direction: "outDown"
     order:
-      - "Hello::Print"
+      - "Hello::Print->Slide Out"
+      - "Edit::Print"
