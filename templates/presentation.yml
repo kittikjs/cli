@@ -1,0 +1,20 @@
+shapes:
+  - name: "Hello"
+    type: "FigText"
+    options:
+      text: "Hello, Kittik"
+      x: "center"
+      y: "middle"
+      font: "Ghost"
+
+animations:
+  - name: "Print"
+    type: "Print"
+    options:
+      duration: 2000
+
+slides:
+  - shapes:
+    animations:
+    order:
+      - "Hello::Print"
