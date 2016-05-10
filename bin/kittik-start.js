@@ -2,13 +2,10 @@
 "use strict";
 
 const commander = require('commander');
-const Presentation = require('kittik/lib/Presentation').Presentation;
-const fs = require('fs');
+const yaml = require('yamljs');
+const Deck = require('kittik');
 
 commander
   .arguments('<file>')
-  .action(function (file) {
-    let slides = JSON.parse(fs.readFileSync(file)).slides;
-    Presentation.create(slides).run();
-  })
+  .action(file => Deck.create(yaml.load(file)).run())
   .parse(process.argv);

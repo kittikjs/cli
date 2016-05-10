@@ -18,7 +18,7 @@
   "scripts": {
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "test": "istanbul cover _mocha"
+    "test": "echo \"We don't have tests, for now\""
   },
   "dependencies": {
     "commander": "2.9.0",
@@ -26,13 +26,8 @@
     "yamljs": "0.2.7"
   },
   "devDependencies": {
-    "chai": "3.5.0",
-    "coveralls": "2.11.9",
     "cz-conventional-changelog": "1.1.6",
-    "istanbul": "0.4.3",
-    "mocha": "2.4.5",
-    "semantic-release": "4.3.5",
-    "sinon": "1.17.4"
+    "semantic-release": "4.3.5"
   },
   "config": {
     "commitizen": {
