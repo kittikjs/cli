@@ -16,7 +16,6 @@
     "kittik": "./bin/kittik.js"
   },
   "scripts": {
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "echo \"We don't have tests, for now\""
   },

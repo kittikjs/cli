@@ -7,14 +7,12 @@ notifications:
   email: true
 node_js:
   - stable
-  - 4
 before_script:
   - npm prune
 after_success:
   - 'curl -Lo travis_after_all.py https://git.io/travis_after_all'
   - python travis_after_all.py
   - 'export $(cat .to_export_back) &> /dev/null'
-  - npm run coveralls
   - npm run semantic-release
 branches:
   except:
