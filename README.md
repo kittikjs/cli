@@ -1,8 +1,5 @@
 # kittik-cli
 
-![Build Status](https://img.shields.io/travis/kittikjs/cli.svg)
-![Coverage](https://img.shields.io/coveralls/kittikjs/cli.svg)
-
 ![Downloads](https://img.shields.io/npm/dm/kittik-cli.svg)
 ![Downloads](https://img.shields.io/npm/dt/kittik-cli.svg)
 ![npm version](https://img.shields.io/npm/v/kittik-cli.svg)
@@ -13,7 +10,7 @@
 ![dependencies](https://img.shields.io/david/kittikjs/cli.svg)
 ![dev dependencies](https://img.shields.io/david/dev/kittikjs/cli.svg)
 
-CLI tool for starting Kittik presentations
+CLI tool for starting Kittik presentations.
 
 ## Getting Started
 
@@ -23,17 +20,61 @@ Install it via npm:
 npm install -g kittik-cli
 ```
 
+Create your presentation:
+
+```shell
+kittik create my_presentation
+```
+
 Start your presentation:
 
 ```shell
-kittik start presentation.json
+kittik start my_presentation.yml
+```
+
+## Example
+
+Here is an example how you can declare your yml file:
+
+```yml
+# Array of shapes available in all slides by name
+shapes:
+  - name: "Hello"
+    type: "FigText"
+    options:
+      text: "Hello, Kittik"
+      x: "center"
+      y: "middle"
+      font: "Ghost"
+
+# Array of animations available in all slides by name
+animations:
+  - name: "Print"
+    type: "Print"
+    options:
+      duration: 2000
+
+# Array of slides in your presentation
+slides:
+    # Array of shapes, but available only in this slide
+  - shapes:
+      - name: "Local Shape"
+        type: "Text"
+        options:
+          text: "Local Shape"
+    # Array of animations, but available only in this slide
+    animations:
+    # Array with order of rendering the shapes
+    # Format: <shape>::<animation1>-><animation2>
+    order:
+      - "Hello::Print->Print"
 ```
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Eugene Obrezkov
+Copyright (c) 2015-2016 Eugene Obrezkov
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
