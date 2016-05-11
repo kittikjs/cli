@@ -1,0 +1,105 @@
+shapes:
+  - name: "Hello, Kittik"
+    type: "FigText"
+    options:
+      text: "Hello, Kittik"
+      x: "center"
+      y: "middle"
+
+  - name: "Shapes Caption"
+    type: "FigText"
+    options:
+      text: "Shapes"
+      x: "center"
+      y: 2
+
+  - name: "Animations Caption"
+    type: "FigText"
+    options:
+      text: "Animations"
+      x: "center"
+      y: 2
+
+  - name: "Text Demo"
+    type: "Text"
+    options:
+      text: "Text Shape"
+      x: "center"
+      y: 10
+
+  - name: "Rectangle Demo"
+    type: "Rectangle"
+    options:
+      text: "Rectangle Shape"
+      x: "center"
+      y: 12
+      height: 3
+      width: "50%"
+      background: "white"
+      foreground: "black"
+
+  - name: "FigText Demo"
+    type: "FigText"
+    options:
+      text: "Figlet Shape"
+      x: "center"
+      y: 17
+      font: "Star Wars"
+
+  - name: "Code Demo"
+    type: "Code"
+    options:
+      code: "function foo() {return 'bar';}\nfor (let i = 0; i < 100; i++) {console.log(foo());}"
+      x: "center"
+      y: 25
+
+  - name: "GitHub Link"
+    type: "Text"
+    options:
+      text: "https://github.com/kittikjs"
+      x: "center"
+      y: "middle"
+      foreground: "light_blue"
+
+animations:
+  - name: "Print"
+    type: "Print"
+    options:
+      duration: 2000
+
+  - name: "Slide In"
+    type: "Slide"
+    options:
+      direction: "inLeft"
+
+  - name: "Slide Out"
+    type: "Slide"
+    options:
+      direction: "outRight"
+
+  - name: "Focus"
+    type: "Focus"
+    options:
+      direction: "bounceUp"
+      duration: 200
+
+slides:
+  - order:
+    - "Hello, Kittik"
+
+  - order:
+    - "Shapes Caption"
+    - "Text Demo"
+    - "Rectangle Demo"
+    - "FigText Demo"
+    - "Code Demo"
+
+  - order:
+    - "Animations Caption::Print"
+    - "Text Demo::Print"
+    - "Rectangle Demo::Slide In->Focus"
+    - "FigText Demo::Slide In->Slide Out"
+    - "Code Demo::Slide In"
+
+  - order:
+    - "GitHub Link::Print"
