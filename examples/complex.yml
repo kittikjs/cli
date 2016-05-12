@@ -62,7 +62,7 @@ shapes:
       text: "https://github.com/kittikjs"
       x: "center"
       y: "middle"
-      foreground: "light_blue"
+      foreground: "blue"
 
 animations:
   - name: "Print"
@@ -78,7 +78,7 @@ animations:
   - name: "Slide Out"
     type: "Slide"
     options:
-      direction: "outRight"
+      direction: "outLeft"
 
   - name: "Focus"
     type: "Focus"
@@ -100,8 +100,8 @@ slides:
   - order:
     - "Animations Caption::Print"
     - "Text Demo::Print"
-    - "Rectangle Demo::Slide In->Focus"
-    - "FigText Demo::Slide In->Slide Out"
+    - "Rectangle Demo::Slide In->Focus->Slide Out"
+    - "FigText Demo::Print->Focus"
     - "Code Demo::Slide In"
 
   - order:
