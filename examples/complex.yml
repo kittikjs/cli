@@ -5,6 +5,7 @@ shapes:
       text: "Hello, Kittik"
       x: "center"
       y: "middle"
+      foreground: "red"
 
   - name: "Shapes Caption"
     type: "FigText"
@@ -12,6 +13,7 @@ shapes:
       text: "Shapes"
       x: "center"
       y: 2
+      foreground: "red"
 
   - name: "Animations Caption"
     type: "FigText"
@@ -19,6 +21,7 @@ shapes:
       text: "Animations"
       x: "center"
       y: 2
+      foreground: "red"
 
   - name: "Text Demo"
     type: "Text"
