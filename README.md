@@ -32,43 +32,108 @@ Start your presentation:
 kittik start my_presentation.yml
 ```
 
-## Example
+## Walkthrough
 
-Here is an example how you can declare your yml file:
+Let me show you the process of creating a presentation step by step.
 
-```yml
-# Array of shapes available in all slides by name
-shapes:
-  - name: "Hello"
-    type: "FigText"
-    options:
-      text: "Hello, Kittik"
-      x: "center"
-      y: "middle"
-      font: "Ghost"
+First of all, you need to create an empty YAML file.
+You can do this by `touch my-presentation.yml` or scaffold it via `kittik create my-presentation`.
+For educational purposes, I'll create an empty YAML file called `my-presentation.yml`.
 
-# Array of animations available in all slides by name
-animations:
-  - name: "Print"
-    type: "Print"
-    options:
-      duration: 2000
+Let's add our first slide declaration.
+Since our slides is an array of objects with slide declaration, we need to declare it as an array of objects:
 
-# Array of slides in your presentation
+```yaml
 slides:
-    # Array of shapes, but available only in this slide
   - shapes:
-      - name: "Local Shape"
-        type: "Text"
-        options:
-          text: "Local Shape"
-    # Array of animations, but available only in this slide
     animations:
-    # Array with order of rendering the shapes
-    # Format: <shape>::<animation1>-><animation2>
     order:
-      - "Hello::Print->Print"
 ```
+
+It is our first slide, but it's empty for now.
+We need to declare some shape in it.
+You can achieve this by adding an item into `shapes` array.
+`shapes` is an array of objects with shapes declaration:
+
+```yaml
+slides:
+  - shapes:
+    - name: "Our Shape Name"
+      type: "FigText"
+      options:
+        text: "Hello, Kittik"
+        x: "center"
+        y: "middle"
+        font: "Ghost"
+
+    animations:
+    order:
+```
+
+We have our first shape, which renders "Hello, Kittik" in the center of a terminal via Fig fonts.
+Now, we need to say that we want this shape renders in specified order.
+`order` is an array of strings where you specify the name of a shape and animations to play:
+
+```yaml
+slides:
+  - shapes:
+    - name: "Our Shape Name"
+      type: "FigText"
+      options:
+        text: "Hello, Kittik"
+        x: "center"
+        y: "middle"
+        font: "Ghost"
+
+    animations:
+    order:
+      - "Our Shape Name"
+```
+
+You can run the presentation via `kittik start my-presentation.yml` now.
+You will see our shape successfully rendered in a terminal.
+
+![kittik](https://cloud.githubusercontent.com/assets/3625244/16656135/28b6a372-4466-11e6-9c26-3e8bb28b8d75.png)
+
+What about animations?
+
+Let's add some simple animation.
+My favorite one is printing a text.
+Add a similar declaration as in shapes, but in `animations` property.
+`animations` is an array of objects where animations declaration are live:
+
+```yaml
+slides:
+  - shapes:
+      - name: "Our Shape Name"
+        type: "FigText"
+        options:
+          text: "Hello, Kittik"
+          x: "center"
+          y: "middle"
+          font: "Ghost"
+
+    animations:
+      - name: "Our Animation Name"
+        type: "Print"
+        options:
+          duration: 4000
+          easing: "outBounce"
+
+    order:
+      - "Our Shape Name::Our Animation Name"
+```
+
+Take an attention to how `order` property was changed.
+I've added `::` and animation name that we declared previously.
+That way, I'm saying to Kittik I want to render `Our Shape Name` with animation `Our Animation Name`.
+
+Run the presentation:
+
+![kittik](https://cloud.githubusercontent.com/assets/3625244/16656376/21906c08-4467-11e6-91ce-d9989c222629.gif)
+
+In this guide, I showed you how to create a simple presentation.
+If you want to go deeper here, I'd recommend you visit [these guides in kittik repository](https://github.com/kittikjs/kittik/doc/guides).
 
 ## License
 
