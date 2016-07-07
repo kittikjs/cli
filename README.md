@@ -133,7 +133,7 @@ Run the presentation:
 ![kittik](https://cloud.githubusercontent.com/assets/3625244/16656376/21906c08-4467-11e6-91ce-d9989c222629.gif)
 
 In this guide, I showed you how to create a simple presentation.
-If you want to go deeper here, I'd recommend you visit [these guides in kittik repository](https://github.com/kittikjs/kittik/doc/guides).
+If you want to go deeper here, I'd recommend you visit [these guides in kittik repository](https://github.com/kittikjs/kittik/tree/dev/doc/guides).
 
 ## License
 
