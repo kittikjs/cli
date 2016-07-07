@@ -1,31 +1,19 @@
 shapes:
-  - name: "Hello"
+  - name: "Hello, Kittik"
     type: "FigText"
     options:
       text: "Hello, Kittik"
       x: "center"
       y: "middle"
-      font: "Star Wars"
+      font: "Ghost"
 
 animations:
   - name: "Print"
     type: "Print"
     options:
-      duration: 2000
+      duration: 4000
+      easing: "outBounce"
 
 slides:
-  - shapes:
-      - name: "Edit"
-        type: "FigText"
-        options:
-          text: "Edit your YML file"
-          x: "center"
-          y: "middle"
-    animations:
-      - name: "Slide Out"
-        type: "Slide"
-        options:
-          direction: "outDown"
-    order:
-      - "Hello::Print->Slide Out"
-      - "Edit::Print"
+  - order:
+      - "Hello, Kittik::Print"
